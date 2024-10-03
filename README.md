@@ -1,96 +1,199 @@
-# College-ERP
-A college management system built using Django framework. It is designed for interactions between students and teachers. Features include attendance, marks and time table.
+# College Enterprise Resource Planner
+This is a College Enterprise Resource Planner Developed by me and my project partners for my college.
+We use Python/Django Framwork for building an fully functional web application. (If facing problem!! : put discussion)
+## Deployed at <a href="https://syncx.pythonanywhere.com" target="_blank" rel="SIGCE"><img src="media/SIGCE.png" width="20" height="20" alt="SIGCE" /><span> SIGCE</span></a>   v1.1.0
 
-## Installation
+For viewing the home page of student you must have required credentials given below 
 
-Python and Django need to be installed
+-> E-Mail : student@student.com 
+-> Password : student@erp
 
-```bash
-pip install django
+
+
+## Features of this Project
+
+
+### A. Admin Users Can
+1. See Overall Summary Charts of Students Performances, Staff Performances, Courses, Subjects, Leave, etc.
+2. Manage Staff (Add, Update and Delete)
+3. Manage Students (Add, Update and Delete)
+4. Manage Course (Add, Update and Delete)
+5. Manage Subjects (Add, Update and Delete)
+6. Manage Sessions (Add, Update and Delete)
+7. View Student Attendance
+8. Review and Reply Student/Staff Feedback
+9. Review (Approve/Reject) Student/Staff Leave
+
+### B. Staff/Teachers Can
+1. See the Overall Summary Charts related to their students, their subjects, leave status, etc.
+2. Take/Update Students Attendance
+3. Add/Update Result
+4. Apply for Leave
+5. Send Feedback to HOD
+
+### C. Students Can
+1. See the Overall Summary Charts related to their attendance, their subjects, leave status, etc.
+2. View Attendance
+3. View Result
+4. Apply for Leave
+5. Send Feedback to HOD
+
+
+## Support Developer
+1. Add a Star 🌟  to this 👆 Repository
+2. Follow on Github & LinkedIn 
+
+
+## How to Install and Run this project?
+
+### Pre-Requisites:
+1. Install Git Version Control
+[ https://git-scm.com/ ]
+
+2. Install Python Latest Version
+[ https://www.python.org/downloads/ ]
+
+3. Install Pip (Package Manager)
+[ https://pip.pypa.io/en/stable/installing/ ]
+
+*Alternative to Pip is Homebrew*
+
+### Installation
+**1. Create a Folder where you want to save the project**
+
+**2. Create a Virtual Environment and Activate**
+
+Install Virtual Environment First
+```
+$  pip install virtualenv
 ```
 
-## Usage
+Create Virtual Environment
 
-Go to the College-ERP folder and run
-
-```bash
-python manage.py runserver
+For Windows
+```
+$  python -m venv venv
+```
+For Mac
+```
+$  python3 -m venv venv
+```
+For Linux
+```
+$  virtualenv .
 ```
 
-Then go to the browser and enter the url **http://127.0.0.1:8000/**
+Activate Virtual Environment
 
-
-## Login
-
-The login page is common for students and teachers.  
-The username is their name and password for everyone is 'project123'.  
-
-Example usernames:  
-student- 'samarth'  
-teacher- 'trisila'  
-
-You can access the django admin page at **http://127.0.0.1:8000/admin** and login with username 'admin' and the above password.
-
-Also a new admin user can be created using
-
-```bash
-python manage.py createsuperuser
+For Windows
+```
+$  source venv/scripts/activate
 ```
 
-## Users
+For Mac
+```
+$  source venv/bin/activate
+```
 
-New students and teachers can be added through the admin page. A new user needs to be created for each. 
+For Linux
+```
+$  source bin/activate
+```
 
-The admin page is used to modify all tables such as Students, Teachers, Departments, Courses, Classes etc.
+**3. Clone this project**
+```
+$  git clone https://github.com/Ansarimajid/College-ERP.git
+```
 
-**For more details regarding the system and features please refer the reports included.**
+Then, Enter the project
+```
+$  cd College-ERP
+```
 
-## Update (29/11/2020)
+**4. Install Requirements from 'requirements.txt'**
+```python
+$  pip3 install -r requirements.txt
+```
 
-Added method to reset attendance time range in Django Admin page.
+**5. Add the hosts**
 
-![alt_text](https://i.imgur.com/0xOWmUZ.png)
+- Got to settings.py file 
+- Then, On allowed hosts, Use **[]** as your host. 
+```python
+ALLOWED_HOSTS = []
+```
+*Do not use the fault allowed settings in this repo. It has security risk!*
 
-This is present in Django Admin -> Attendance (http://127.0.0.1:8000/admin/info/attendanceclass/).  
-Start Date: Start Date of Attendance period  
-End Date: End Date of Attendance period
 
-This will delete all present attendance data and create new attendance objects for the given time range. 
+**6. Now Run Server**
 
-## Screenshots
+Command for PC:
+```python
+$ python manage.py runserver
+```
 
-### Teacher Page
+Command for Mac:
+```python
+$ python3 manage.py runserver
+```
 
-![alt text](https://imgur.com/pMAoEbG.png)
+Command for Linux:
+```python
+$ python3 manage.py runserver
+```
 
-![alt text](https://imgur.com/ZiQ3RRA.png)
+**7. Login Credentials**
 
-![alt text](https://imgur.com/i025CJW.png)
+Create Super User (HOD)
+Command for PC:
+```
+$  python manage.py createsuperuser
+```
 
-![alt text](https://imgur.com/HQlLYmC.png)
+Command for Mac:
+```
+$  python3 manage.py createsuperuser
+```
 
-![alt text](https://imgur.com/j6RyBmU.png)
+Command for Linux:
+```
+$  python3 manage.py createsuperuser
+```
 
-![alt text](https://imgur.com/xIKEMvQ.png)
 
-![alt text](https://imgur.com/4Rl7Fpv.png)
 
-### Student Page
-
-![alt text](https://imgur.com/isL9cjz.png)
-
-![alt text](https://imgur.com/5pzl7m3.png)
-
-![alt text](https://imgur.com/7zWhHZx.png)
-
-![alt text](https://imgur.com/fu7gxk8.png)
-
-![alt text](https://imgur.com/NZqU268.png)
-
-### Admin Page
-
-![alt text](https://imgur.com/sDvDc9N.png)
-
-![alt text](https://imgur.com/tMKWx6f.png)
-
-![alt text](https://imgur.com/PvCsNeB.png)
+## Project's Journey
+| Admin/Staff/Student Login |
+| Add and Edit Course |
+- [x] Add and Edit Staff
+- [x] Add and Edit Student
+- [x] Add and Edit Subject
+- [x] Upload Staff's Picture
+- [x] Upload Student's Picture
+- [x] Sidebar Active Status
+- [x] Named URLs
+- [x] Model Forms for adding  student
+- [x] Model Forms for all
+- [x] Views Permission (MiddleWareMixin)
+- [x] Attendance and Update Attendance
+- [x] Password Reset Via Email
+- [x] Apply For Leave
+- [x] Students Can Check Attendance
+- [x] Check Email Availability
+- [x] Reply to Leave Applications
+- [x] Reply to Feedback
+- [x] Admin View Attendance
+- [x] Password Change for Admin, Staff and Students using *set_password()*
+- [x] Admin Profile Edit
+- [x] Staff Profile Edit
+- [x] Student Profile Edit
+- [x] Student Dashboard Fixed
+- [x] Passing Page Title From View  - Improved
+- [x] Staff Dashboard Fixed
+- [x] Admin Dashboard Fixed
+- [x] Staff Add Student's Result
+- [x] Staff Edit Result Using CBVs (Class Based Views)
+- [x] Google CAPTCHA
+- [x] Student View Result
+- [x] Change all links to be dynamic
+- [x] Code Restructure - Very Important
