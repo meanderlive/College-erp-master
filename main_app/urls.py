@@ -133,7 +133,6 @@ urlpatterns = [
          name='student_fcmtoken'),
      # path('student/todo',student_views.todo,name='todo'),
 
-     
      path("student/viewbooks/", student_views.view_books, name="view_books"),
 
     path("student/view/notification/", student_views.student_view_notification,
