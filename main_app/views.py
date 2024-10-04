@@ -15,10 +15,13 @@ from .models import Attendance, Session, Subject
 def login_page(request):
     if request.user.is_authenticated:
         if request.user.user_type == '1':
+            print(f' admin functions call')
             return redirect(reverse("admin_home"))
         elif request.user.user_type == '2':
+            print(f' staff_home functions call')
             return redirect(reverse("staff_home"))
         else:
+            print(f' student_home functions call')
             return redirect(reverse("student_home"))
     return render(request, 'main_app/login.html')
 
@@ -57,6 +60,7 @@ def doLogin(request, **kwargs):
             else:
                 return redirect(reverse("student_home"))
         else:
+
             messages.error(request, "Invalid details")
             return redirect("/")
 
